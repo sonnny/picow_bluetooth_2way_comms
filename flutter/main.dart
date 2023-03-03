@@ -1,6 +1,7 @@
 //
 // flutter pub add get
 // flutter pub add flutter_reactive_ble
+// edit android/app/build.gradle (line 50) to change minSkdVersion to 21
 // android settings, app, give location permission for ble to work
 
 // filename: main.dart
