@@ -1,8 +1,11 @@
 //
 // flutter pub add get
 // flutter pub add flutter_reactive_ble
-// edit android/app/build.gradle (line 50) to change minSkdVersion to 21
 // android settings, app, give location permission for ble to work
+//
+// if flutter run complains about minSdkVersion then edit file android/app/build.gradle
+//    look for minSdkVersion and change it to 21 (I think this is what flutter suggest at this time March 3, 2023)
+//    this change might not be needed in the future if flutter creates changes to minSdkVersion
 
 // filename: main.dart
 import 'package:flutter/material.dart';
