@@ -256,6 +256,9 @@ static void nordic_can_send(void * some_context){
     //if (context->counter > 'Z') context->counter = 'A';
     //memset(context->test_data, context->counter, context->test_data_len);
 
+    /**********************************************************************************************/
+    /****************** put your own function here to send notification to android app ************/
+    /**********************************************************************************************/
     if (!gpio_get(BUTTON)) memcpy(context->test_data, button_pressed, strlen(button_pressed));
     else memcpy(context->test_data, button_released, strlen(button_released));
     
@@ -300,6 +303,10 @@ static void nordic_spp_packet_handler(uint8_t packet_type, uint16_t channel, uin
                     break;
             }
             break;
+		    
+        /********************************************************************************/
+        /***** put your own function here to process received data from android app *****/
+        /********************************************************************************/
         case RFCOMM_DATA_PACKET:
             if (packet[0] == 0x74) {
 			  gpio_put(BLUE_LED, toggle);
