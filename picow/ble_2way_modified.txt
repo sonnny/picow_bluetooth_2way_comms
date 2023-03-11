@@ -20,8 +20,7 @@
 //   2nd way - send button status from pico w to android app
 //
 // on nordic_can send function, you can add your own function
-// on nordic_spp_packet_handler function
-//    under case RFCOMM_DATA_PACKET: you can handle data received
+// under case RFCOMM_DATA_PACKET: you can handle data received
 //
 // mkdir build
 // cd build
